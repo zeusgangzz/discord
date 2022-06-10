@@ -1,0 +1,19 @@
+# Command
+Command:
+  Command: salary
+  Description: Send salary for staff
+  Usage: salary
+  Aliases: []
+  Type: management
+# Salary
+Coins: 5000
+# Perms for command
+RoleRequired: Owner
+# Staff role
+StaffRole: Staff
+Lang:
+  salarySended:
+    Author: 💰 Salary sent ({Coins})
+    Title: Staff list
+    Description: "{list}"
+    Footer: Thanks for being a awesome staff member with {GuildName}

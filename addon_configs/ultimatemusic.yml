@@ -1,0 +1,586 @@
+Settings:
+  Lavalink:
+    Node:
+      # If you have a lava link server, use your servers credentials.
+      # Otherwise do not mess with these settings.
+      host: corebot
+      port: 433
+      password: password
+  Spotify:
+    Enabled: true
+    ClientID: 3a0059005aee4433a8909af18b4fabf1
+    ClientSecret: 811c68e7e4144f708baf251e9cd3995d
+    # Create a Spotify application @ https://developer.spotify.com/dashboard
+    # to get the ID and secret
+  StopDelay:
+    Enabled: true
+    # If the bot should wait x amount of seconds before checking
+    # if the voice channel is still empty when someone leaves.
+    # Primarly for accidently channel disconnecting/switching
+    Delay: 10
+  SearchingType: response
+  # Types: response (respond with corresponding number)
+  # reaction (react with corresponding number)
+  # first (automatically choose first result)
+  NowPlayingMessage: true
+  AnnounceSongRepeat: true
+  AnnounceQueueRepeat: true
+  DontSendNowPlayingInLiveQueueChannel: true
+  VoteSkip:
+    Timer: 30
+  AutoPlay:
+    Enabled: false
+    Play: PUT-LINK-HERE
+    # The YouTube/SoundCloud/Spotify video link to play
+    VoiceChannel: music
+    TextChannel: music
+    NowPlayingMessages: false
+    AnnounceStartAndRestart: true
+    StartBackUp: true
+  Commands:
+    Permissions:
+      play:
+        - "@everyone"
+      stop:
+        - "@everyone"
+      queue:
+        - "@everyone"
+      pause:
+        - "@everyone"
+      resume:
+        - "@everyone"
+      skip:
+        - "@everyone"
+      join:
+        - "@everyone"
+      autoplay:
+        - admin
+      clearqueue:
+        - "@everyone"
+      lyrics:
+        - "@everyone"
+      livequeue:
+        - admin
+      nowplaying:
+        - "@everyone"
+      playlist:
+        - "@everyone"
+      removesong:
+        - "@everyone"
+      restart:
+        - "@everyone"
+      repeat:
+        - "@everyone"
+      shuffle:
+        - "@everyone"
+      seek:
+        - "@everyone"
+      skipto:
+        - "@everyone"
+      track:
+        - "@everyone"
+      volume:
+        - "@everyone"
+      voteskip:
+        - "@everyone"
+    Descriptions:
+      play: Play music in a voice channel
+      stop: Stop playing music
+      queue: View the list of queued songs
+      pause: Pause the currently playing song
+      resume: Resume the currently paused song
+      skip: Skip to the next song in the queue
+      join: Make the bot join your voice channel
+      autoplay: Manage auto play
+      clearqueue: Clear the queue
+      lyrics: View the lyrics of a song
+      livequeue: Send a live queue menu
+      nowplaying: View information on the currently playing song
+      playlist: Manage your playlists
+      removesong: Remove a song or multiple songs from the queue
+      restart: Restart the currently playing song
+      repeat: Turn on or off the song/queue repeat
+      shuffle: Shuffle the music queue
+      seek: Seek to a certain position in the song
+      skipto: Skip to a position in the queue
+      track: View information on a certain song in the queue
+      volume: Change the volume of the bot's voice output
+      voteskip: Vote to skip to the next song
+    Aliases:
+      play:
+        - p
+      stop:
+        - leave
+        - disconnect
+      queue:
+        - q
+      pause: []
+      resume: []
+      skip:
+        - next
+      join:
+        - connect
+      autoplay:
+        - ap
+      clearqueue:
+        - cq
+      lyrics:
+        - l
+      livequeue:
+        - dq
+        - dynamicqueue
+        - lq
+      nowplaying:
+        - np
+        - currentsong
+        - currenttrack
+        - currentlyplaying
+      playlist:
+        - playlists
+      removesong:
+        - removesongs
+      restart:
+        - restartsong
+      repeat:
+        - songrepeat
+        - queuerepeat
+      shuffle: []
+      seek: []
+      skipto: []
+      track:
+        - song
+      volume:
+        - vol
+      voteskip: []
+Language:
+  Errors:
+    NotInVoiceChannel: You must be in a voice channel to run this command
+    NotInSameVoiceChannel: You must be in the same voice channel as me to run this command
+    VideoNotFound: A song could not be found with that link or search query. Try a
+      different link or query
+    VideoCouldNotLoad: The song could not be loaded. Try again
+    CanceledSearch: Canceled music search
+    InvalidNumber: That is not a valid number. Please choose the number that
+      corresponds with the video.
+    BotNotInVoiceChannel: I am not in a voice channel
+    NotPlayingMusic: Music is currently not being played
+    AlreadyPaused: The music is already paused
+    NotPaused: The music is not paused
+    AlreadyInYourVoiceChannel: I am already in your voice channel
+    AlreadyInAnotherVoiceChannel: I am already in another voice channel
+    InvalidQueuePosition: That is not a valid position in the queue
+    InvalidStartingPosition: Starting position must be less than the ending position
+    SongRepeatAlreadyEnabled: Song repeat is already enabled
+    QueueRepeatAlreadyEnabled: Queue repeat is already enabled
+    RepeatNotEnabled: There is no repeat mode enabled
+    InvalidVolume: The volume must be a number between 0 and 100 (inclusive)
+    NotSeekable: This song is not seekable
+    InvalidSongPosition:
+      - "That is not a valid position. Ex: 01:13, 04:06, 12:05"
+      - That position does not exist in the current song
+    CantFindLyrics:
+      - "Lyrics for that song could not be found. "
+      - Lyrics for that song could not be found. Try providing the song name
+        instead
+    AlreadyVoteSkipping: Users are already voting to skip
+    MustBeSecondSongInQueue: There must be another song in the queue to run this command
+    AlreadyAutoPlaying: Auto play is already started
+    AutoPlayNotRunning: Auto play is not running
+    InvalidPlaylist: You do not have a playlist created with that name
+    AlreadyHavePlaylist: You already have a playlist with that name. Would you like
+      to delete it and continue creating a new one?
+    NoPlaylists: You do not have any playlists created
+    AutoPlayNotEnabled: Auto play must be enabled to run this command
+  Words:
+    Song: Song
+    Queue: Queue
+    None: None
+    Livestream: livestream
+    Nothing: Nothing
+    AutoPlay: Auto Play
+    Unknown: Unknown
+    NotIncludingLives: Not including livestreams
+    Nobody: Nobody
+    Page: Page
+    YouTube: YouTube
+    SoundCloud: SoundCloud
+    Spotify: Spotify
+    Twitch: Twitch
+  NowPlaying:
+    Author: "{platform-name}"
+    AuthorIcon: "{platform-icon}"
+    Title: 🎶 {auto-playing}Now Playing
+    Description: "[{song-title}]({song-link}) requested by {user-mention}"
+    Thumbnail: "{song-thumbnail}"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+    AutoPlaying: "Auto Play | "
+  QueueEnded:
+    Title: ⏹️ Queue Ended
+    Description: The music queue has been ended
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Queue:
+    Title: 📃 Music Queue
+    Description: |-
+      **Currently Playing:** [{song-title}]({song-link})
+
+      {queue}
+
+      **Total Queue Duration:** {duration}
+      **Repeat Mode:** {mode}
+    Thumbnail: "{song-thumbnail}"
+    FooterIcon: "{bot-pfp}"
+  AddedPlaylistToQueue:
+    Title: ⤵️ Added Playlist To Queue
+    Description: Added playlist [{playlist-name}]({playlist-link}) to the queue
+      (**{playlist-length}** songs)
+    Thumbnail: "{playlist-thumbnail}"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  AddedSongToQueue:
+    Title: ⤵️ Added To Queue
+    Description: Added [{song-title}]({song-link}) to the queue
+    Thumbnail: "{song-thumbnail}"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  SearchResults:
+    Title: Search Results
+    Description: |-
+      Showing top 10 search results for `{search}`:
+      {results}
+    ResultsFormat: |-
+      **{position}.** [{song-title}]({song-link})
+      > By `{song-author}`
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Connected:
+    Title: \📞 Connected
+    Description: Connected to the voice channel
+    Color: "#43fc32"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Disconnected:
+    Title: ⏹️ Disconnected
+    Description: Disconnected from the voice channel
+    Color: "#f52c2c"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Paused:
+    Title: ⏸️ Music Paused
+    Description: The song has been paused
+    Color: "#fca232"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Resumed:
+    Title: ▶️ Music Resumed
+    Description: The song has been resumed
+    Color: "#43fc32"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Skipped:
+    Title: ⏭️ Song Skipped
+    Description: The song has been skipped
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  QueueCleared:
+    Title: Queue Cleared
+    Description: The queue has been cleared
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Error:
+    Author: Uh oh!
+    Title: "{error-message}"
+    Color: "#f52c2c"
+    Timestamp: true
+  ErrorWithUsage:
+    Author: Uh oh!
+    Title: "{error-message}"
+    Description: "**Usage:** `{usage}`"
+    Color: "#f52c2c"
+    Timestamp: true
+  SkippedMultiple:
+    Title: ⏭️ Songs Skipped
+    Description: Skipped to position `{position}` in the queue
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Restarting:
+    Title: 🔄 Restarting
+    Description: Restarting the current song
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  CurrentlyPlaying:
+    Author: "{platform-name}"
+    AuthorIcon: "{platform-icon}"
+    Title: "Now Playing:"
+    Description: "[{song-title}]({song-link})"
+    Fields:
+      - Name: Creator
+        Value: "{song-author}"
+      - Name: Request By
+        Value: "{user-mention}"
+      - Name: Duration
+        Value: "{duration}"
+    Thumbnail: "{song-thumbnail}"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Track:
+    Author: "{platform-name}"
+    AuthorIcon: "{platform-icon}"
+    Title: Track {position} In Queue
+    Description: "[{song-title}]({song-link})"
+    Fields:
+      - Name: Creator
+        Value: "{song-author}"
+      - Name: Request By
+        Value: "{user-mention}"
+      - Name: Duration
+        Value: "{duration}"
+    Thumbnail: "{song-thumbnail}"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Removed:
+    Title: ⤴️ Song Removed
+    Description: The song at position `{start}` has been removed from the queue
+    Color: "#f52c2c"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  RemovedMultiple:
+    Title: ⏭️ Song Skipped
+    Description: The songs at position `{start}` through `{end}` have been removed
+    Color: "#f52c2c"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Shuffled:
+    Title: 🔀 Queue Shuffled
+    Description: The queue has been shuffled
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  SongRepeatEnabled:
+    Title: 🔁 Song Repeat
+    Description: The song will now be repeated
+    Color: "#43fc32"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  SongRepeatDisabled:
+    Title: 🔁 Repeat Toggled
+    Description: The song repeat has been disabled
+    Color: "#f52c2c"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  QueueRepeatEnabled:
+    Title: 🔁 Queue Repeat
+    Description: The queue will now be repeated
+    Color: "#43fc32"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  QueueRepeatDisabled:
+    Title: 🔁 Repeat Toggled
+    Description: The queue repeat has been disabled
+    Color: "#f52c2c"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  RepeatingSong:
+    Title: 🔁 Repeating Song
+    Description: The current song is being repeated
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  RepeatingQueue:
+    Title: 🔁 Repeating Queue
+    Description: The queue is being repeated
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  CurrentVolume:
+    Title: 🔊 Volume
+    Description: The current volume is **{volume}**/**100**
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  UpdatedVolume:
+    Title: 🔊 Volume
+    Description: Volume updated to **{volume}**/**100**
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Seek:
+    Title: ⏩ Seek
+    Description: Seeking to position **{position}** in the song
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  Lyrics:
+    Author: Genius
+    AuthorIcon: https://media.discordapp.net/attachments/689149005024067704/836401257676537906/8ed669cadd956443e29c70361ec4f372.1000x1000x1.png?
+    Title: "{name} Lyrics"
+    URL: "{link}"
+    Thumbnail: "{thumbnail}"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  VoteSkipping:
+    Title: 🗳️ Vote Skip
+    Description: |-
+      React with :white_check_mark: if you want to skip the current song!
+      React with :x: if you do not want to skip the current song!
+
+      **Time Left:** {time-left}
+      **Next Song:** {song-title}
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  VoteSkipped:
+    Title: ⏭️ Song Skipped
+    Description: More people voted to skip the song! The song is now being skipped...
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  NotSkipped:
+    Title: 🚫 Song Not Skipped
+    Description: More or an equal amount of people voted to **not** skip the song!
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  LiveQueue:
+    # This embed currently does not support advanced embed configuration
+    Author: Live
+    Title: Music Queue
+    Fields:
+      - Currently Playing
+      - "Up Next:"
+      - Queue Duration
+      - Repeat Mode
+    MoreTracks: ... {amount} more tracks ...
+  CreatePlaylist:
+    Name:
+      Author: 📕 Create A Playlist
+      Title: What will the name of the playlist be?
+      Timestamp: true
+      Footer: "{bot-username}"
+      FooterIcon: "{bot-pfp}"
+    AddSongs:
+      Author: 📕 Create A Playlist
+      Title: Send a link to a song, album, or playlist
+      Description: "**Valid sources are:** YouTube, SoundCloud, and Spotify"
+      Timestamp: true
+      Footer: "{bot-username}"
+      FooterIcon: "{bot-pfp}"
+    AddedToPlaylist:
+      Playlist:
+        Author: 📕 Create A Playlist
+        Title: Added To Playlist
+        Description: Added songs from playlist [{playlist-name}]({playlist-link}) to
+          your playlist (**{playlist-length}** songs). **Would you like to add
+          more songs to your playlist?**
+        Thumbnail: "{playlist-thumbnail}"
+        Timestamp: true
+        Footer: "{bot-username}"
+        FooterIcon: "{bot-pfp}"
+      Song:
+        Author: 📕 Create A Playlist
+        Title: Added To Playlist
+        Description: Added [{song-title}]({song-link}) to your playlist. **Would you
+          like to add more songs to your playlist?**
+        Thumbnail: "{song-thumbnail}"
+        Timestamp: true
+        Footer: "{bot-username}"
+        FooterIcon: "{bot-pfp}"
+    Created:
+      Author: 📕 Playlist Created
+      Title: Your playlist "**{playlist-name}**" ({playlist-length} songs) has been
+        created
+      Timestamp: true
+      Footer: "{bot-username}"
+      FooterIcon: "{bot-pfp}"
+    Cancel:
+      Author: 📕 Create A Playlist
+      Title: Canceled playlist creation
+      Timestamp: true
+      Footer: "{bot-username}"
+      FooterIcon: "{bot-pfp}"
+  Playlists:
+    Title: \📕 Playlists (Page {current-page}/{max-pages})
+    Description: |-
+      You have the following playlists:
+      {playlists}
+    Format: "> **{playlist-name}** (**{playlist-length}** songs)"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  DeletedPlaylist:
+    Title: \📕 Deleted Playlist
+    Description: Your playlist **{playlist-name}** has been deleted
+    Color: "#f52c2c"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  PlayingPlaylist:
+    Title: ⤵️ Added Playlist To Queue
+    Description: Added your playlist **{playlist-name}** to the queue
+      (**{playlist-length}** songs)
+    Thumbnail: "{playlist-thumbnail}"
+    Timestamp: true
+    Footer: "{bot-username}"
+    FooterIcon: "{bot-pfp}"
+  AutoPlay:
+    Starting:
+      Title: 🎶 Starting Auto Play
+      Description: Playing [{name}]({link})
+      Thumbnail: "{thumbnail}"
+      Timestamp: true
+      Footer: "{bot-username}"
+      FooterIcon: "{bot-pfp}"
+    Restarting:
+      Title: 🎶 Restarting Auto Play
+      Description: Playing [{name}]({link})
+      Thumbnail: "{thumbnail}"
+      Timestamp: true
+      Footer: "{bot-username}"
+      FooterIcon: "{bot-pfp}"
+    Stopping:
+      Title: 🎶 Auto Play
+      Description: Stopping auto play
+      Timestamp: true
+      Footer: "{bot-username}"
+      FooterIcon: "{bot-pfp}"
+    ForceStarting:
+      Title: Starting Auto Play
+      Description: Auto play is now being started
+      Timestamp: true
+      Footer: "{bot-username}"
+      FooterIcon: "{bot-pfp}"
+    ForceStopping:
+      Title: Stopping Auto Play
+      Description: Auto play is now being stopped
+      Timestamp: true
+      Footer: "{bot-username}"
+      FooterIcon: "{bot-pfp}"
+    ForceRestarting:
+      Title: Restarting Auto Play
+      Description: Auto play is now being restarted
+      Timestamp: true
+      Footer: "{bot-username}"
+      FooterIcon: "{bot-pfp}"

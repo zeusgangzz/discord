@@ -1,0 +1,11 @@
+Enabled: true
+Permission: Developer
+Guild: "870501599750004766"
+# Interval time in Seconds
+Interval: 60
+# Available Types: online, dnd, idle, offline
+Channels:
+  - Layout: "{online-count} 🟢"
+  - Layout: "{dnd-count} 🔴"
+  - Layout: "{idle-count} 🟠"
+  - Layout: "{offline-count} ⚫"
